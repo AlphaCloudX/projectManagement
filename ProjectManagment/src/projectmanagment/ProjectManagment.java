@@ -4,17 +4,27 @@
  */
 package projectmanagment;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author evwil0771
  */
 public class ProjectManagment extends javax.swing.JFrame {
-
+    
+    MainMenu mainMenuWindow;
+    
     /**
      * Creates new form ProjectManagment
      */
-    public ProjectManagment() {
+    public ProjectManagment(MainMenu m) {
         initComponents();
+        mainMenuWindow = m;
+        
+        getQuestion();
+        getAnswer();
+        
+        
     }
 
     /**
@@ -62,7 +72,7 @@ public class ProjectManagment extends javax.swing.JFrame {
         a1Btn7 = new javax.swing.JRadioButton();
         a2Btn7 = new javax.swing.JRadioButton();
         a3Btn7 = new javax.swing.JRadioButton();
-        a3Btn1 = new javax.swing.JRadioButton();
+        a3Btn6 = new javax.swing.JRadioButton();
         q10Lbl = new javax.swing.JLabel();
         a1Btn8 = new javax.swing.JRadioButton();
         a2Btn8 = new javax.swing.JRadioButton();
@@ -74,10 +84,12 @@ public class ProjectManagment extends javax.swing.JFrame {
         q8Lbl = new javax.swing.JLabel();
         a1Btn10 = new javax.swing.JRadioButton();
         q6Lbl = new javax.swing.JLabel();
-        a1Btn1 = new javax.swing.JRadioButton();
-        a2Btn1 = new javax.swing.JRadioButton();
+        a1Btn6 = new javax.swing.JRadioButton();
+        a2Btn6 = new javax.swing.JRadioButton();
         a2Btn10 = new javax.swing.JRadioButton();
         a3Btn10 = new javax.swing.JRadioButton();
+        feedBackFeild = new javax.swing.JTextField();
+        backBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,6 +161,11 @@ public class ProjectManagment extends javax.swing.JFrame {
 
         q9Group.add(a1Btn7);
         a1Btn7.setText("jRadioButton1");
+        a1Btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a1Btn7ActionPerformed(evt);
+            }
+        });
 
         q9Group.add(a2Btn7);
         a2Btn7.setText("jRadioButton1");
@@ -156,8 +173,8 @@ public class ProjectManagment extends javax.swing.JFrame {
         q9Group.add(a3Btn7);
         a3Btn7.setText("jRadioButton1");
 
-        q6Group.add(a3Btn1);
-        a3Btn1.setText("jRadioButton1");
+        q6Group.add(a3Btn6);
+        a3Btn6.setText("jRadioButton1");
 
         q10Lbl.setText("q10");
 
@@ -188,16 +205,16 @@ public class ProjectManagment extends javax.swing.JFrame {
 
         q6Lbl.setText("q6");
 
-        q6Group.add(a1Btn1);
-        a1Btn1.setText("jRadioButton1");
-        a1Btn1.addActionListener(new java.awt.event.ActionListener() {
+        q6Group.add(a1Btn6);
+        a1Btn6.setText("jRadioButton1");
+        a1Btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                a1Btn1ActionPerformed(evt);
+                a1Btn6ActionPerformed(evt);
             }
         });
 
-        q6Group.add(a2Btn1);
-        a2Btn1.setText("jRadioButton1");
+        q6Group.add(a2Btn6);
+        a2Btn6.setText("jRadioButton1");
 
         q8Group.add(a2Btn10);
         a2Btn10.setText("jRadioButton1");
@@ -205,22 +222,53 @@ public class ProjectManagment extends javax.swing.JFrame {
         q8Group.add(a3Btn10);
         a3Btn10.setText("jRadioButton1");
 
+        feedBackFeild.setText("Feedback:");
+
+        backBtn.setText("Back To Main Menu");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(q1Lbl)
+                            .addComponent(q2Lbl))
+                        .addGap(69, 69, 69)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(a1Btn2)
+                                .addGap(18, 18, 18)
+                                .addComponent(a2Btn2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(a3Btn2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(a1Btn)
+                                .addGap(18, 18, 18)
+                                .addComponent(a2Btn)
+                                .addGap(18, 18, 18)
+                                .addComponent(a3Btn)))
+                        .addGap(18, 18, 18)
+                        .addComponent(feedBackFeild, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(q8Lbl)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(q3Lbl)
                                 .addGap(69, 69, 69)
                                 .addComponent(a1Btn3)
                                 .addGap(18, 18, 18)
                                 .addComponent(a2Btn3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
                                 .addComponent(a3Btn3))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(q4Lbl)
@@ -228,7 +276,7 @@ public class ProjectManagment extends javax.swing.JFrame {
                                 .addComponent(a1Btn4)
                                 .addGap(18, 18, 18)
                                 .addComponent(a2Btn4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
                                 .addComponent(a3Btn4))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(q5Lbl)
@@ -236,146 +284,138 @@ public class ProjectManagment extends javax.swing.JFrame {
                                 .addComponent(a1Btn5)
                                 .addGap(18, 18, 18)
                                 .addComponent(a2Btn5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
                                 .addComponent(a3Btn5))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(q6Lbl)
                                     .addComponent(q7Lbl))
                                 .addGap(69, 69, 69)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(a1Btn6)
+                                    .addComponent(a1Btn7)
+                                    .addComponent(a1Btn8))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(a2Btn6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(a3Btn6))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(a2Btn7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(a3Btn7))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(a2Btn8)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(a3Btn8))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(q10Lbl)
+                                    .addComponent(q9Lbl))
+                                .addGap(63, 63, 63)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(a1Btn10)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(a2Btn10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(a3Btn10))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(a1Btn9)
                                         .addGap(18, 18, 18)
                                         .addComponent(a2Btn9)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(a3Btn9))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(a1Btn1)
                                         .addGap(18, 18, 18)
-                                        .addComponent(a2Btn1)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a3Btn1))))
+                                        .addComponent(a3Btn9)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(q8Lbl)
-                                .addGap(69, 69, 69)
-                                .addComponent(a1Btn10)
-                                .addGap(18, 18, 18)
-                                .addComponent(a2Btn10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(a3Btn10))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(q9Lbl)
-                                    .addComponent(q10Lbl))
-                                .addGap(63, 63, 63)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(a1Btn8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a2Btn8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a3Btn8)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(a1Btn7)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a2Btn7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(a3Btn7))))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(138, 138, 138)
+                                .addGap(128, 128, 128)
                                 .addComponent(titleLbl))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(q1Lbl)
-                                    .addComponent(q2Lbl))
-                                .addGap(69, 69, 69)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(a1Btn2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a2Btn2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(a3Btn2))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(a1Btn)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a2Btn)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(a3Btn)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(backBtn))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titleLbl)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q1Lbl)
-                    .addComponent(a1Btn)
-                    .addComponent(a2Btn)
-                    .addComponent(a3Btn))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q2Lbl)
-                    .addComponent(a1Btn2)
-                    .addComponent(a2Btn2)
-                    .addComponent(a3Btn2))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q3Lbl)
-                    .addComponent(a1Btn3)
-                    .addComponent(a2Btn3)
-                    .addComponent(a3Btn3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q4Lbl)
-                    .addComponent(a1Btn4)
-                    .addComponent(a2Btn4)
-                    .addComponent(a3Btn4))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q5Lbl)
-                    .addComponent(a1Btn5)
-                    .addComponent(a2Btn5)
-                    .addComponent(a3Btn5))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q6Lbl)
-                    .addComponent(a1Btn1)
-                    .addComponent(a2Btn1)
-                    .addComponent(a3Btn1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q7Lbl)
-                    .addComponent(a1Btn9)
-                    .addComponent(a2Btn9)
-                    .addComponent(a3Btn9))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q8Lbl)
-                    .addComponent(a1Btn10)
-                    .addComponent(a2Btn10)
-                    .addComponent(a3Btn10))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q9Lbl)
-                    .addComponent(a1Btn7)
-                    .addComponent(a2Btn7)
-                    .addComponent(a3Btn7))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(q10Lbl)
-                    .addComponent(a1Btn8)
-                    .addComponent(a2Btn8)
-                    .addComponent(a3Btn8))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(q1Lbl)
+                            .addComponent(a1Btn)
+                            .addComponent(a2Btn)
+                            .addComponent(a3Btn))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(q2Lbl)
+                            .addComponent(a1Btn2)
+                            .addComponent(a2Btn2)
+                            .addComponent(a3Btn2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(q3Lbl)
+                            .addComponent(a1Btn3)
+                            .addComponent(a2Btn3)
+                            .addComponent(a3Btn3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(q4Lbl)
+                            .addComponent(a1Btn4)
+                            .addComponent(a2Btn4)
+                            .addComponent(a3Btn4))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(q5Lbl)
+                            .addComponent(a1Btn5)
+                            .addComponent(a2Btn5)
+                            .addComponent(a3Btn5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(q6Lbl)
+                            .addComponent(a1Btn6)
+                            .addComponent(a2Btn6)
+                            .addComponent(a3Btn6))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(q7Lbl))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(a1Btn7)
+                                    .addComponent(a2Btn7)
+                                    .addComponent(a3Btn7))))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(q8Lbl)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(a1Btn8)
+                                .addComponent(a2Btn8)
+                                .addComponent(a3Btn8)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(q9Lbl)
+                                .addGap(31, 31, 31)
+                                .addComponent(q10Lbl))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(a1Btn9)
+                                    .addComponent(a2Btn9)
+                                    .addComponent(a3Btn9))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(a1Btn10)
+                                    .addComponent(a2Btn10)
+                                    .addComponent(a3Btn10)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(feedBackFeild)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(backBtn)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -396,76 +436,172 @@ public class ProjectManagment extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_a1BtnActionPerformed
 
-    private void a1Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1Btn1ActionPerformed
+    private void a1Btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1Btn6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_a1Btn1ActionPerformed
+    }//GEN-LAST:event_a1Btn6ActionPerformed
+
+    private void a1Btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1Btn7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_a1Btn7ActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Go back to the main menu
+     * @param evt 
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ProjectManagment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ProjectManagment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ProjectManagment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ProjectManagment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        // Create Quiz Window
+        //Quiz window frame is now visible
+        mainMenuWindow.setVisible(true);
+        
+        //Set This Window to not be visible
+        this.setVisible(false);
+    }//GEN-LAST:event_backBtnActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ProjectManagment().setVisible(true);
-            }
-        });
+    
+    public void getQuestion(){
+        ArrayList <Question> data = DataLoader.readQuestions();
+        String q1 = data.get(0).getQuestion();
+        String q2 = data.get(1).getQuestion();
+        String q3 = data.get(2).getQuestion();
+        String q4 = data.get(3).getQuestion();
+        String q5 = data.get(4).getQuestion();
+        String q6 = data.get(5).getQuestion();
+        String q7 = data.get(6).getQuestion();
+        String q8 = data.get(7).getQuestion();
+        String q9 = data.get(8).getQuestion();
+        String q10 = data.get(9).getQuestion();
+        q1Lbl.setText(q1);
+        q2Lbl.setText(q2);
+        q3Lbl.setText(q3);
+        q4Lbl.setText(q4);
+        q5Lbl.setText(q5);
+        q6Lbl.setText(q6);
+        q7Lbl.setText(q7);
+        q8Lbl.setText(q8);
+        q9Lbl.setText(q9);
+        q10Lbl.setText(q10);
+    }
+    public void getAnswer(){
+        ArrayList <Question> data = DataLoader.readQuestions();
+        String a1 = data.get(0).getPossibleAns1();
+        String a2 = data.get(0).getPossibleAns2();
+        String a3 = data.get(0).getPossibleAns3();
+        
+        String a11 = data.get(1).getPossibleAns1();
+        String a12 = data.get(1).getPossibleAns2();
+        String a13 = data.get(1).getPossibleAns3();
+        
+        String a21 = data.get(2).getPossibleAns1();
+        String a22 = data.get(2).getPossibleAns2();
+        String a23 = data.get(2).getPossibleAns3();
+        
+        String a31 = data.get(3).getPossibleAns1();
+        String a32 = data.get(3).getPossibleAns2();
+        String a33 = data.get(3).getPossibleAns3();
+        
+        String a41 = data.get(4).getPossibleAns1();
+        String a42 = data.get(4).getPossibleAns2();
+        String a43 = data.get(4).getPossibleAns3();
+        
+        String a51 = data.get(5).getPossibleAns1();
+        String a52 = data.get(5).getPossibleAns2();
+        String a53 = data.get(5).getPossibleAns3();
+        
+        String a61 = data.get(6).getPossibleAns1();
+        String a62 = data.get(6).getPossibleAns2();
+        String a63 = data.get(6).getPossibleAns3();
+        
+        String a71 = data.get(7).getPossibleAns1();
+        String a72 = data.get(7).getPossibleAns2();
+        String a73 = data.get(7).getPossibleAns3();
+        
+        String a81 = data.get(8).getPossibleAns1();
+        String a82 = data.get(8).getPossibleAns2();
+        String a83 = data.get(8).getPossibleAns3();
+        
+        String a91 = data.get(9).getPossibleAns1();
+        String a92 = data.get(9).getPossibleAns2();
+        String a93 = data.get(9).getPossibleAns3();
+        
+     
+        a1Btn.setText(a1);
+        a2Btn.setText(a2);
+        a3Btn.setText(a3);
+        
+        a1Btn2.setText(a11);
+        a2Btn2.setText(a12);
+        a3Btn2.setText(a13);
+        
+        a1Btn3.setText(a21);
+        a2Btn3.setText(a22);
+        a3Btn3.setText(a23);
+        
+        a1Btn4.setText(a31);
+        a2Btn4.setText(a32);
+        a3Btn4.setText(a33);
+        
+        a1Btn5.setText(a41);
+        a2Btn5.setText(a42);
+        a3Btn5.setText(a43);
+        
+        a1Btn6.setText(a51);
+        a2Btn6.setText(a52);
+        a3Btn6.setText(a53);
+        
+        a1Btn7.setText(a61);
+        a2Btn7.setText(a62);
+        a3Btn7.setText(a63);
+        
+        a1Btn8.setText(a71);
+        a2Btn8.setText(a72);
+        a3Btn8.setText(a73);
+        
+        a1Btn9.setText(a81);
+        a2Btn9.setText(a82);
+        a3Btn9.setText(a83);
+        
+        a1Btn10.setText(a91);
+        a2Btn10.setText(a92);
+        a3Btn10.setText(a93);
+        
+        
+     
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton a1Btn;
-    private javax.swing.JRadioButton a1Btn1;
     private javax.swing.JRadioButton a1Btn10;
     private javax.swing.JRadioButton a1Btn2;
     private javax.swing.JRadioButton a1Btn3;
     private javax.swing.JRadioButton a1Btn4;
     private javax.swing.JRadioButton a1Btn5;
+    private javax.swing.JRadioButton a1Btn6;
     private javax.swing.JRadioButton a1Btn7;
     private javax.swing.JRadioButton a1Btn8;
     private javax.swing.JRadioButton a1Btn9;
     private javax.swing.JRadioButton a2Btn;
-    private javax.swing.JRadioButton a2Btn1;
     private javax.swing.JRadioButton a2Btn10;
     private javax.swing.JRadioButton a2Btn2;
     private javax.swing.JRadioButton a2Btn3;
     private javax.swing.JRadioButton a2Btn4;
     private javax.swing.JRadioButton a2Btn5;
+    private javax.swing.JRadioButton a2Btn6;
     private javax.swing.JRadioButton a2Btn7;
     private javax.swing.JRadioButton a2Btn8;
     private javax.swing.JRadioButton a2Btn9;
     private javax.swing.JRadioButton a3Btn;
-    private javax.swing.JRadioButton a3Btn1;
     private javax.swing.JRadioButton a3Btn10;
     private javax.swing.JRadioButton a3Btn2;
     private javax.swing.JRadioButton a3Btn3;
     private javax.swing.JRadioButton a3Btn4;
     private javax.swing.JRadioButton a3Btn5;
+    private javax.swing.JRadioButton a3Btn6;
     private javax.swing.JRadioButton a3Btn7;
     private javax.swing.JRadioButton a3Btn8;
     private javax.swing.JRadioButton a3Btn9;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JTextField feedBackFeild;
     private javax.swing.JPanel jPanel1;
     private javax.swing.ButtonGroup q10Group;
     private javax.swing.JLabel q10Lbl;
