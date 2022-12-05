@@ -1,31 +1,31 @@
-[Q] sample question 1
-[WA] choice 1
-[WA] choice 2
-[WA] choice 3
-[A] choice 4
+[Q] Who developed the WaterFall Model?
+[WA] Dr Winston Royce
+[WA] NASA
+[WA] Bob
+[A] Dr Winston Royce
 [N] notes
-[Q] sample question 2
-[WA] choice 1
-[WA] choice 2
-[WA] choice 3
-[A] choice 4
+[Q] A WaterFall Model phase
+[WA] Guess and check
+[WA] Maintenance
+[WA] Adding
+[A] Maintenance
 [N] notes
-[Q] sample question 3
-[WA] choice 1
-[WA] choice 2
-[WA] choice 3
-[A] choice 4
+[Q] An example of a project management tool used in class
+[WA] Gantt chart
+[WA] Pie graph
+[WA] Yearly reports
+[A] Gantt chart
 [N] notes
-[Q] sample question 4
-[WA] choice 1
-[WA] choice 2
-[WA] choice 3
-[A] choice 4
+[Q] What is GitHub?
+[WA] An IDE
+[WA] Programming language
+[WA] A file sharing program
+[A] A file sharing program
 [N] notes
-[Q] sample question 5
-[WA] choice 1
-[WA] choice 2
-[WA] choice 3
+[Q] What is maintenance for?
+[WA] Fix bugs
+[WA] Start a new program
+[WA] 
 [A] choice 4
 [N] notes
 [Q] sample question 6
