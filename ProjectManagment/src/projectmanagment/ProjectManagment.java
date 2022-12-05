@@ -10,6 +10,8 @@ package projectmanagment;
  */
 public class ProjectManagment extends javax.swing.JFrame {
 
+    
+    
     /**
      * Creates new form ProjectManagment
      */
@@ -26,8 +28,15 @@ public class ProjectManagment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         titleLbl = new javax.swing.JLabel();
+        txt = new javax.swing.JLabel();
+        btn1 = new javax.swing.JRadioButton();
+        btn2 = new javax.swing.JRadioButton();
+        btn3 = new javax.swing.JRadioButton();
+        btnCheck = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -35,21 +44,76 @@ public class ProjectManagment extends javax.swing.JFrame {
 
         titleLbl.setText("Project Managment Quiz");
 
+        txt.setText("text here");
+
+        buttonGroup1.add(btn1);
+        btn1.setText("jRadioButton1");
+
+        buttonGroup1.add(btn2);
+        btn2.setText("jRadioButton2");
+
+        buttonGroup1.add(btn3);
+        btn3.setText("jRadioButton3");
+
+        btnCheck.setText("check");
+        btnCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCheckActionPerformed(evt);
+            }
+        });
+
+        btnNext.setText("next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(138, 138, 138)
-                .addComponent(titleLbl)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(titleLbl))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btn1)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(btn2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btn3))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(14, 14, 14)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnNext)
+                                            .addComponent(btnCheck))))))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titleLbl)
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(txt)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn1)
+                    .addComponent(btn2)
+                    .addComponent(btn3))
+                .addGap(63, 63, 63)
+                .addComponent(btnCheck)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnNext)
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -65,6 +129,20 @@ public class ProjectManagment extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckActionPerformed
+        //button CHECK function
+        
+    }//GEN-LAST:event_btnCheckActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        //button NEXT function
+        Question q = new Question("This question is what add what?", "1", "2", "3", "2");
+        q.setFeedback("great job!");
+        q.setScore(2);
+        
+        //unfinish  txt.
+    }//GEN-LAST:event_btnNextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,7 +180,14 @@ public class ProjectManagment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton btn1;
+    private javax.swing.JRadioButton btn2;
+    private javax.swing.JRadioButton btn3;
+    private javax.swing.JButton btnCheck;
+    private javax.swing.JButton btnNext;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel titleLbl;
+    private javax.swing.JLabel txt;
     // End of variables declaration//GEN-END:variables
 }
