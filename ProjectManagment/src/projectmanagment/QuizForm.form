@@ -90,13 +90,20 @@
                                   <Component id="a3Btn1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="a4Btn1" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn2" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="a4Btn2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="a4Btn1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <Component id="q8Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="q3Lbl" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
@@ -105,8 +112,10 @@
                           <Component id="a2Btn3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="a3Btn3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="a4Btn3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="score3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="q4Lbl" min="-2" max="-2" attributes="0"/>
@@ -116,8 +125,10 @@
                           <Component id="a2Btn4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="a3Btn4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="a4Btn4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="score4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="q5Lbl" min="-2" max="-2" attributes="0"/>
@@ -127,8 +138,10 @@
                           <Component id="a2Btn5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="a3Btn5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="a4Btn5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="score5" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -147,22 +160,28 @@
                                   <Component id="a2Btn6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="a3Btn6" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="a4Btn6" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score6" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="a2Btn7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="a3Btn7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="a4Btn7" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score7" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="a2Btn8" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="a3Btn8" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="a4Btn8" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score8" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -189,21 +208,32 @@
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="a4Btn9" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn10" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="a4Btn10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score10" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="a4Btn9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="score9" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
                           <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="backBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="backBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="submit" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="q8Lbl" alignment="0" min="-2" pref="12" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="162" max="32767" attributes="0"/>
-                  <Component id="feedBackFeild" min="-2" pref="348" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="450" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -212,112 +242,102 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="q1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a1Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a2Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a3Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="q2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a1Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a2Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a3Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="q3Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a1Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a2Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a3Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="q4Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a1Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a2Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a3Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="q5Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a1Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a2Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a3Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="q6Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a1Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a2Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a3Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="a4Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Component id="q7Lbl" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="a1Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a2Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a3Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a4Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="q8Lbl" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="a1Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="a2Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="a3Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="a4Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Component id="q9Lbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="q10Lbl" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="a1Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a2Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a3Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a4Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="a1Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a2Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a3Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="a4Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                          <Component id="feedBackFeild" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="q1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a1Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="q2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a1Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="q3Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a1Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="q4Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a1Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="q5Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a1Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="q6Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a1Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="a1Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="q7Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="q8Lbl" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="a1Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="a2Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="a3Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="a4Btn8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="score8" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="a1Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="q9Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="a1Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a2Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a3Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="a4Btn10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="q10Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="score10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace pref="22" max="32767" attributes="0"/>
-                  <Component id="backBtn" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="backBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="submit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -644,11 +664,6 @@
             <Property name="text" type="java.lang.String" value="jRadioButton1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="feedBackFeild">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Feedback:"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="backBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Back To Main Menu"/>
@@ -719,6 +734,64 @@
               <ComponentRef name="q10Group"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jRadioButton1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="submit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Submit Quiz"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="score10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
       </SubComponents>

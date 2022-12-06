@@ -13,6 +13,16 @@ import java.util.Arrays;
 public class QuizForm extends javax.swing.JFrame {
 
     MainMenu mainMenuWindow;
+    
+    //Store the questions
+    ArrayList<Question> data = DataLoader.readQuestions();
+    //Store a shallow copy of the buttons in an arraylist
+    ArrayList<javax.swing.JLabel> questionLabels = new ArrayList<>();
+    //Store the radioButtons
+    ArrayList<ArrayList<javax.swing.JRadioButton>> radioButtons = new ArrayList<>();
+    
+    //Store the scores to output
+    ArrayList<javax.swing.JLabel> scoreTexArrayList = new ArrayList<>();
 
     /**
      * Creates new form ProjectManagment
@@ -20,10 +30,11 @@ public class QuizForm extends javax.swing.JFrame {
     public QuizForm(MainMenu m) {
         initComponents();
         mainMenuWindow = m;
-        
+
         //Create the form when the window is initialized
         writeQuestion();
         writeAnswer();
+        loadScoreText();
 
     }
 
@@ -90,7 +101,6 @@ public class QuizForm extends javax.swing.JFrame {
         a2Btn6 = new javax.swing.JRadioButton();
         a2Btn10 = new javax.swing.JRadioButton();
         a3Btn10 = new javax.swing.JRadioButton();
-        feedBackFeild = new javax.swing.JTextField();
         backBtn = new javax.swing.JButton();
         a4Btn3 = new javax.swing.JRadioButton();
         a4Btn4 = new javax.swing.JRadioButton();
@@ -100,6 +110,17 @@ public class QuizForm extends javax.swing.JFrame {
         a4Btn8 = new javax.swing.JRadioButton();
         a4Btn9 = new javax.swing.JRadioButton();
         a4Btn10 = new javax.swing.JRadioButton();
+        submit = new javax.swing.JButton();
+        score1 = new javax.swing.JLabel();
+        score2 = new javax.swing.JLabel();
+        score3 = new javax.swing.JLabel();
+        score4 = new javax.swing.JLabel();
+        score5 = new javax.swing.JLabel();
+        score6 = new javax.swing.JLabel();
+        score7 = new javax.swing.JLabel();
+        score8 = new javax.swing.JLabel();
+        score9 = new javax.swing.JLabel();
+        score10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -238,8 +259,6 @@ public class QuizForm extends javax.swing.JFrame {
         q10Group.add(a3Btn10);
         a3Btn10.setText("jRadioButton1");
 
-        feedBackFeild.setText("Feedback:");
-
         backBtn.setText("Back To Main Menu");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,6 +290,33 @@ public class QuizForm extends javax.swing.JFrame {
         q10Group.add(a4Btn10);
         a4Btn10.setText("jRadioButton1");
 
+        submit.setText("Submit Quiz");
+        submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitActionPerformed(evt);
+            }
+        });
+
+        score1.setText("jLabel1");
+
+        score2.setText("jLabel1");
+
+        score3.setText("jLabel1");
+
+        score4.setText("jLabel1");
+
+        score5.setText("jLabel1");
+
+        score6.setText("jLabel1");
+
+        score7.setText("jLabel1");
+
+        score8.setText("jLabel1");
+
+        score9.setText("jLabel1");
+
+        score10.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -296,11 +342,16 @@ public class QuizForm extends javax.swing.JFrame {
                                 .addComponent(a2Btn1)
                                 .addGap(18, 18, 18)
                                 .addComponent(a3Btn1)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(a4Btn1)
-                            .addComponent(a4Btn2)))
-                    .addComponent(q8Lbl)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(a4Btn2)
+                                .addGap(18, 18, 18)
+                                .addComponent(score2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(a4Btn1)
+                                .addGap(18, 18, 18)
+                                .addComponent(score1))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(q3Lbl)
                         .addGap(69, 69, 69)
@@ -309,8 +360,10 @@ public class QuizForm extends javax.swing.JFrame {
                         .addComponent(a2Btn3)
                         .addGap(18, 18, 18)
                         .addComponent(a3Btn3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a4Btn3))
+                        .addGap(18, 18, 18)
+                        .addComponent(a4Btn3)
+                        .addGap(18, 18, 18)
+                        .addComponent(score3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(q4Lbl)
                         .addGap(69, 69, 69)
@@ -319,8 +372,10 @@ public class QuizForm extends javax.swing.JFrame {
                         .addComponent(a2Btn4)
                         .addGap(18, 18, 18)
                         .addComponent(a3Btn4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a4Btn4))
+                        .addGap(18, 18, 18)
+                        .addComponent(a4Btn4)
+                        .addGap(18, 18, 18)
+                        .addComponent(score4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(q5Lbl)
                         .addGap(69, 69, 69)
@@ -329,8 +384,10 @@ public class QuizForm extends javax.swing.JFrame {
                         .addComponent(a2Btn5)
                         .addGap(18, 18, 18)
                         .addComponent(a3Btn5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(a4Btn5))
+                        .addGap(18, 18, 18)
+                        .addComponent(a4Btn5)
+                        .addGap(18, 18, 18)
+                        .addComponent(score5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(q6Lbl)
@@ -346,20 +403,26 @@ public class QuizForm extends javax.swing.JFrame {
                                 .addComponent(a2Btn6)
                                 .addGap(18, 18, 18)
                                 .addComponent(a3Btn6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(a4Btn6))
+                                .addGap(18, 18, 18)
+                                .addComponent(a4Btn6)
+                                .addGap(18, 18, 18)
+                                .addComponent(score6))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(a2Btn7)
                                 .addGap(18, 18, 18)
                                 .addComponent(a3Btn7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(a4Btn7))
+                                .addGap(18, 18, 18)
+                                .addComponent(a4Btn7)
+                                .addGap(18, 18, 18)
+                                .addComponent(score7))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(a2Btn8)
                                 .addGap(18, 18, 18)
                                 .addComponent(a3Btn8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(a4Btn8))))
+                                .addGap(18, 18, 18)
+                                .addComponent(a4Btn8)
+                                .addGap(18, 18, 18)
+                                .addComponent(score8))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(q10Lbl)
@@ -379,109 +442,115 @@ public class QuizForm extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(a3Btn9)
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(a4Btn9)
-                            .addComponent(a4Btn10)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(a4Btn10)
+                                .addGap(18, 18, 18)
+                                .addComponent(score10))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(a4Btn9)
+                                .addGap(18, 18, 18)
+                                .addComponent(score9))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(128, 128, 128)
                         .addComponent(titleLbl))
-                    .addComponent(backBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
-                .addComponent(feedBackFeild, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(backBtn)
+                        .addGap(27, 27, 27)
+                        .addComponent(submit))
+                    .addComponent(q8Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(450, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(titleLbl)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(q1Lbl)
-                            .addComponent(a1Btn1)
-                            .addComponent(a2Btn1)
-                            .addComponent(a3Btn1)
-                            .addComponent(a4Btn1))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(q2Lbl)
-                            .addComponent(a1Btn2)
-                            .addComponent(a2Btn2)
-                            .addComponent(a3Btn2)
-                            .addComponent(a4Btn2))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(q3Lbl)
-                            .addComponent(a1Btn3)
-                            .addComponent(a2Btn3)
-                            .addComponent(a3Btn3)
-                            .addComponent(a4Btn3))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(q4Lbl)
-                            .addComponent(a1Btn4)
-                            .addComponent(a2Btn4)
-                            .addComponent(a3Btn4)
-                            .addComponent(a4Btn4))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(q5Lbl)
-                            .addComponent(a1Btn5)
-                            .addComponent(a2Btn5)
-                            .addComponent(a3Btn5)
-                            .addComponent(a4Btn5))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(q6Lbl)
-                            .addComponent(a1Btn6)
-                            .addComponent(a2Btn6)
-                            .addComponent(a3Btn6)
-                            .addComponent(a4Btn6))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(q7Lbl))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(a1Btn7)
-                                    .addComponent(a2Btn7)
-                                    .addComponent(a3Btn7)
-                                    .addComponent(a4Btn7))))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(q8Lbl)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(a1Btn8)
-                                .addComponent(a2Btn8)
-                                .addComponent(a3Btn8)
-                                .addComponent(a4Btn8)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(q9Lbl)
-                                .addGap(31, 31, 31)
-                                .addComponent(q10Lbl))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(a1Btn9)
-                                    .addComponent(a2Btn9)
-                                    .addComponent(a3Btn9)
-                                    .addComponent(a4Btn9))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(a1Btn10)
-                                    .addComponent(a2Btn10)
-                                    .addComponent(a3Btn10)
-                                    .addComponent(a4Btn10)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(feedBackFeild)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(q1Lbl)
+                    .addComponent(a1Btn1)
+                    .addComponent(a2Btn1)
+                    .addComponent(a3Btn1)
+                    .addComponent(a4Btn1)
+                    .addComponent(score1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(q2Lbl)
+                    .addComponent(a1Btn2)
+                    .addComponent(a2Btn2)
+                    .addComponent(a3Btn2)
+                    .addComponent(a4Btn2)
+                    .addComponent(score2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(q3Lbl)
+                    .addComponent(a1Btn3)
+                    .addComponent(a2Btn3)
+                    .addComponent(a3Btn3)
+                    .addComponent(a4Btn3)
+                    .addComponent(score3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(q4Lbl)
+                    .addComponent(a1Btn4)
+                    .addComponent(a2Btn4)
+                    .addComponent(a3Btn4)
+                    .addComponent(a4Btn4)
+                    .addComponent(score4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(q5Lbl)
+                    .addComponent(a1Btn5)
+                    .addComponent(a2Btn5)
+                    .addComponent(a3Btn5)
+                    .addComponent(a4Btn5)
+                    .addComponent(score5))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(q6Lbl)
+                    .addComponent(a1Btn6)
+                    .addComponent(a2Btn6)
+                    .addComponent(a3Btn6)
+                    .addComponent(a4Btn6)
+                    .addComponent(score6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(a1Btn7)
+                    .addComponent(a2Btn7)
+                    .addComponent(a3Btn7)
+                    .addComponent(a4Btn7)
+                    .addComponent(q7Lbl)
+                    .addComponent(score7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(q8Lbl)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(a1Btn8)
+                        .addComponent(a2Btn8)
+                        .addComponent(a3Btn8)
+                        .addComponent(a4Btn8)
+                        .addComponent(score8)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(a1Btn9)
+                    .addComponent(a2Btn9)
+                    .addComponent(a3Btn9)
+                    .addComponent(a4Btn9)
+                    .addComponent(q9Lbl)
+                    .addComponent(score9))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(a1Btn10)
+                    .addComponent(a2Btn10)
+                    .addComponent(a3Btn10)
+                    .addComponent(a4Btn10)
+                    .addComponent(q10Lbl)
+                    .addComponent(score10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(backBtn)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn)
+                    .addComponent(submit))
                 .addContainerGap())
         );
 
@@ -526,15 +595,21 @@ public class QuizForm extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_backBtnActionPerformed
 
+    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+        // TODO add your handling code here:
+        
+        QuizScoring.scoreTest(data, radioButtons, scoreTexArrayList);
+        
+
+    }//GEN-LAST:event_submitActionPerformed
+
     /**
      * Method that handles the output of the questions for each row
      */
     public void writeQuestion() {
-        //Getting the data from the file
-        ArrayList<Question> data = DataLoader.readQuestions();
 
         //Store a shallow copy of the buttons in an arraylist
-        ArrayList<javax.swing.JLabel> questionLabels = new ArrayList<>(Arrays.asList(q1Lbl, q2Lbl, q3Lbl, q4Lbl, q5Lbl, q6Lbl, q7Lbl, q8Lbl, q9Lbl, q10Lbl));
+        questionLabels = new ArrayList<>(Arrays.asList(q1Lbl, q2Lbl, q3Lbl, q4Lbl, q5Lbl, q6Lbl, q7Lbl, q8Lbl, q9Lbl, q10Lbl));
 
         //Save all the questions in an arraylist
         for (int i = 0; i < data.size(); i++) {
@@ -545,16 +620,15 @@ public class QuizForm extends javax.swing.JFrame {
             questionLabels.get(i).setText(question);
         }
     }
-    
+
     /**
-     * Method that handles the output of the radio buttons with a semi random order
+     * Method that handles the output of the radio buttons with a semi random
+     * order
      */
     public void writeAnswer() {
-        //Getting the data from the file
-        ArrayList<Question> data = DataLoader.readQuestions();
 
         //2d Arraylist for the radio button options
-        ArrayList<ArrayList<javax.swing.JRadioButton>> radioButtons = new ArrayList<>(Arrays.asList(new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn1, a2Btn1, a3Btn1, a4Btn1)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn2, a2Btn2, a3Btn2, a4Btn2)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn3, a2Btn3, a3Btn3, a4Btn3)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn4, a2Btn4, a3Btn4, a4Btn4)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn5, a2Btn5, a3Btn5, a4Btn5)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn6, a2Btn6, a3Btn6, a4Btn6)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn7, a2Btn7, a3Btn7, a4Btn7)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn8, a2Btn8, a3Btn8, a4Btn8)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn9, a2Btn9, a3Btn9, a4Btn9)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn10, a2Btn10, a3Btn10, a4Btn10))));
+        radioButtons = new ArrayList<>(Arrays.asList(new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn1, a2Btn1, a3Btn1, a4Btn1)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn2, a2Btn2, a3Btn2, a4Btn2)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn3, a2Btn3, a3Btn3, a4Btn3)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn4, a2Btn4, a3Btn4, a4Btn4)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn5, a2Btn5, a3Btn5, a4Btn5)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn6, a2Btn6, a3Btn6, a4Btn6)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn7, a2Btn7, a3Btn7, a4Btn7)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn8, a2Btn8, a3Btn8, a4Btn8)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn9, a2Btn9, a3Btn9, a4Btn9)), new ArrayList<javax.swing.JRadioButton>(Arrays.asList(a1Btn10, a2Btn10, a3Btn10, a4Btn10))));
 
         //Loop for each question
         for (int i = 0; i < data.size(); i++) {
@@ -591,6 +665,14 @@ public class QuizForm extends javax.swing.JFrame {
                     break;
             }
 
+        }
+    }
+    
+    private void loadScoreText(){
+        scoreTexArrayList = new ArrayList<>(Arrays.asList(score1,score2,score3,score4,score5,score6,score7,score8,score9,score10));
+        
+        for(int i = 0; i < scoreTexArrayList.size(); i++){
+            scoreTexArrayList.get(i).setVisible(false);
         }
     }
 
@@ -640,7 +722,6 @@ public class QuizForm extends javax.swing.JFrame {
     private javax.swing.JRadioButton a4Btn8;
     private javax.swing.JRadioButton a4Btn9;
     private javax.swing.JButton backBtn;
-    private javax.swing.JTextField feedBackFeild;
     private javax.swing.JPanel jPanel1;
     private javax.swing.ButtonGroup q10Group;
     private javax.swing.JLabel q10Lbl;
@@ -662,6 +743,17 @@ public class QuizForm extends javax.swing.JFrame {
     private javax.swing.JLabel q8Lbl;
     private javax.swing.ButtonGroup q9Group;
     private javax.swing.JLabel q9Lbl;
+    private javax.swing.JLabel score1;
+    private javax.swing.JLabel score10;
+    private javax.swing.JLabel score2;
+    private javax.swing.JLabel score3;
+    private javax.swing.JLabel score4;
+    private javax.swing.JLabel score5;
+    private javax.swing.JLabel score6;
+    private javax.swing.JLabel score7;
+    private javax.swing.JLabel score8;
+    private javax.swing.JLabel score9;
+    private javax.swing.JButton submit;
     private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
 }
