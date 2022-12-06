@@ -1,13 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Study Note window
+ * for letting user checking and read note
  */
 package projectmanagment;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
@@ -19,7 +16,7 @@ public class StudyNote extends javax.swing.JFrame {
 
     /**
      * Creates new form StudyNote
-     * @param m
+     * @param m - main menu of the program
      */
     public StudyNote(MainMenu m) {
         initComponents();
@@ -107,11 +104,11 @@ public class StudyNote extends javax.swing.JFrame {
         return msg.substring(0, msg.length()-2);
     }
     private void btmGobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmGobackActionPerformed
-        // Create Quiz Window
+        // Create main Window
         //Main window frame is now visible
         mainMenuWindow.setVisible(true);
         
-        //Set This Window to not be visible
+        //Set Current Window to not visible
         this.setVisible(false);
     }//GEN-LAST:event_btmGobackActionPerformed
 

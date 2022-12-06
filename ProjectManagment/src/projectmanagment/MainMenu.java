@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Main menu of the studying program
  */
 package projectmanagment;
 
@@ -114,10 +113,10 @@ public class MainMenu extends javax.swing.JFrame {
     private void startQuizBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startQuizBtnActionPerformed
         // TODO add your handling code here:
         // Create Quiz Window
-        if(quizWindow == null){
-            quizWindow = new QuizForm(this);
+        if(quizWindow == null){//if the quiz window is close
+            quizWindow = new QuizForm(this);//actvate the quiz
         }
-        //Quiz window frame is now visible
+        //make the Quiz window frame is now visible
         quizWindow.setVisible(true);
         
         //Set This Window to not be visible
@@ -125,15 +124,15 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_startQuizBtnActionPerformed
 
     private void studyNotePageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studyNotePageActionPerformed
-        // TODO add your handling code here:
+        //Function for STUDY NOTE button
         // Create Quiz Window
-        if(studyPageWindow == null){
-            studyPageWindow = new StudyNote(this);
+        if(studyPageWindow == null){//if the studying note page is closed
+            studyPageWindow = new StudyNote(this);//actvate the window
         }
-        //Quiz window frame is now visible
+        //set study note window frame is now visible
         studyPageWindow.setVisible(true);
         
-        //Set This Window to not be visible
+        //Set current Window to not be visible
         this.setVisible(false);
     }//GEN-LAST:event_studyNotePageActionPerformed
 
