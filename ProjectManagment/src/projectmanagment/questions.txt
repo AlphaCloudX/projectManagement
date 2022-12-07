@@ -1,17 +1,17 @@
 [Q] Who developed the WaterFall Model?
-[WA] Dr Winston Royce
+[WA] Billy
 [WA] NASA
 [WA] Bob
 [A] Dr Winston Royce
 [N] Dr Winston Royce developed the WaterFall model
 [Q] A WaterFall Model phase
 [WA] Guess and check
-[WA] Maintenance
+[WA] Deleting
 [WA] Adding
 [A] Maintenance
 [N] Maintenance happens at the end of  the waterfall model
 [Q] An example of a project management tool used in class
-[WA] Gantt chart
+[WA] Bar chart
 [WA] Pie graph
 [WA] Yearly reports
 [A] Gantt chart
@@ -19,23 +19,23 @@
 [Q] What is GitHub?
 [WA] An IDE
 [WA] Programming language
-[WA] A file sharing program
+[WA] A video game
 [A] A code sharing program
 [N] Github is a program that can be used to share programs
 [Q] What is maintenance for?
-[WA] Fix bugs
+[WA] Deleting a program
 [WA] Start a new program
 [WA] Running the program
-[A] Fix bugs
+[A] Fixing bugs
 [N] Maintenance is an important part of the waterfall model that help to keep the program up to date and fix bugs
 [Q] What is the first part of the software development process?
 [WA] Testing
-[WA] Analysis
+[WA] Integration / Test
 [WA] Design
 [A] Analysis
 [N] The parts of the waterfall model in order are: Analysis, Design, Implementation, Testing, Deployment & Maintenance
 [Q] What takes up most of the software development process
-[WA] Maintenance
+[WA] Implementation
 [WA] Design
 [WA] Integration
 [A] Maintenance
@@ -43,18 +43,18 @@
 [Q] When was the Gantt Chart developed
 [WA] 1950's
 [WA] 2000's
-[WA] 1910's
+[WA] 1920's
 [A] 1910's
 [N] The Gantt Chart was developed by Henry Grantt in the 1910's to help project managers to visualize, schedule, and track progress of projects
 [Q] What does UML stand for
 [WA] Universal Modeling Language 
-[WA] Unified Modeling Language
+[WA] Unified Modeling Literature
 [WA] Unified Memoization Language
 [A] Unified Modeling Language
 [N] UML (Unified Modeling Language) is used to visually specify parts of a system
 [Q] When is it best to find a mistake in the software development process (SDLC)
 [WA] Later
 [WA] Never
-[WA] Earlier
+[WA] Half way through
 [A] Earlier
 [N] Its is much less expensive to find mistakes in the SDLC earlier than later because it is much cheaper to correct
